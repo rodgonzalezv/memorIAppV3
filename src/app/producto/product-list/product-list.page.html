@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../../assets/logo.png"></ion-img> 
+    <ion-title>Listado Memoriales</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <ion-list padding>
+    <!-- Recorremos el arreglo de registros utilizando item-->
+    <ion-item *ngFor="let p of productos">
+      <!-- Icono al inicio (start)-->
+      <ion-icon name="star" slot="start"></ion-icon>
+      <!-- Campos de item -->
+      <ion-label>{{p.nombre}}</ion-label>
+      <ion-label>{{p.descripcion}}</ion-label>
+      <ion-label>{{p.cantidad}}</ion-label>
+      
+      <!-- routerlink salta a otra pagina-->
+      <ion-button [routerLink]="['/product-edit/',p.id]">Editar</ion-button><br />
+      <!-- routerlink salta a otra pagina, pero con id del item-->
+      <ion-button [routerLink]="['/product-delete',p.id]">Borrar</ion-button><br />
+      <ion-button [routerLink]="['/product-detail',p.id]">Ver</ion-button><br />
+      
+    </ion-item>
+  </ion-list>
+
+</ion-content>

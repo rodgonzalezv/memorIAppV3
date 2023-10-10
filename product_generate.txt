@@ -1,0 +1,15 @@
+ionic generate 
+ionic generate page
+ionic generate page contact
+ionic generate component contact/form
+ionic generate component login-form --change-detection=OnPush
+ionic generate directive ripple --skip-import
+ionic generate service api/user
+
+
+ionic g page producto/product-add
+ionic g page producto/product-list
+ionic g page producto/product-detail
+ionic g page producto/product-edit
+ionic g page producto/product-all
+ionic g service producto/product-service

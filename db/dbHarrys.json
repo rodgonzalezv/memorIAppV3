@@ -1,0 +1,29 @@
+{
+  "productos": [
+    {
+      "id": 1023,
+      "nombre": "Memorial 2",
+      "descripcion": "Memorial para 1 ser querido",
+      "precio": 0,
+      "fecha": "2023-10-07T03:30:53.773Z",
+      "cantidad": 2
+    },
+    {
+      "id": 15,
+      "nombre": "Memorial Premiun",
+      "descripcion": "Memoriales ilimitados para grupos familiares y amigosss",
+      "precio": 0,
+      "fecha": "2023-10-05T22:17:48.136Z",
+      "cantidad": 100
+    }
+  ],
+  "usuarios": [
+    {
+      "id": "macarena@soco.cl",
+      "first_name": "Macarena Constanza",
+      "last_name": "Piña",
+      "email": "macarena@soco.cl",
+      "clave": "123456"
+    }
+  ]
+}
