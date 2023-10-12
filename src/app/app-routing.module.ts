@@ -44,9 +44,10 @@ const routes: Routes = [
     loadChildren: () => import('./usuarios/crea-usuarios/crea-usuarios.module').then( m => m.CreaUsuariosPageModule)
   },
   {
-    path: 'borra-usuarios/:id',
-    loadChildren: () => import('./usuarios/borra-usuarios/borra-usuarios.module').then( m => m.BorraUsuariosPageModule)
+    path: 'actualizar-usuario/:id',
+    loadChildren: () => import('./usuarios/actualizar-usuario/actualizar-usuario.module').then( m => m.ActualizarUsuarioPageModule)
   },
+
   
 ];
 

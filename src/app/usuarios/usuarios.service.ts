@@ -51,5 +51,13 @@ export class UsuarioService {
       );
   }
 
+  actualizarUsuario(id: number, usuario: ClUsuario): Observable<ClUsuario> {
+    return this.http.put<ClUsuario>(apiUrl + "/" + id, usuario, httpOptions)
+      .pipe(
+        tap(_ => console.log('usuario actualizado id=${id}')),
+        catchError(this.handleError<any>('actualizarUsuario'))
+      );
+  }
+
 
 }
