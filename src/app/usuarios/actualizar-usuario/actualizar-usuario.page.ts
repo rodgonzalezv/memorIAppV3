@@ -29,7 +29,10 @@ constructor(public restApi: UsuarioService,
     this.getUsuario(this.route.snapshot.params['id']);
     // Especificamos Validaciones por medio de FormGroup
     this.usuarioForm = this.formBuilder.group({
-      'user_first_name': [null, Validators.required]
+      'user_first_name': [null, Validators.required],
+      'user_last_name': [null, Validators.required],
+      'user_email': [null, Validators.required],
+      'user_clave': [null, Validators.required]
     });
   }
   async onFormSubmit(form: NgForm) {
@@ -40,7 +43,8 @@ constructor(public restApi: UsuarioService,
         next: (res) => {
           let id = res['id'];
           //this.router.navigate([ 'detail', { outlets: { details: id }} ]);
-          this.router.navigate(['/product-detail/' + this.id]);
+          this.router.navigate(['/lista-usuario/' + this.id]);
+          window.location.reload();
         }
         , complete: () => { }
         , error: (err) => { console.log(err); }
@@ -66,6 +70,9 @@ constructor(public restApi: UsuarioService,
             // Actualiza los datos
             this.usuarioForm.setValue({
               user_first_name: data.first_name,
+              user_last_name: data.last_name,
+              user_email: data.email,
+              user_clave: data.clave
             });
             loading.dismiss();
           }
@@ -80,14 +87,15 @@ constructor(public restApi: UsuarioService,
   
     async presentAlertConfirm(msg: string) {
       const alert = await this.alertController.create({
-        header: 'Warning!',
+        header: 'Advertencia',
         message: msg,
         buttons: [
           {
             text: 'Okay',
             handler: () => {
               //Si funciona el actualizar navega a listar
-              this.router.navigate(['/lista-usuarios/']);
+              this.router.navigate(['/lista-usuarios']);
+              window.location.reload();
             }
           }
         ]
