@@ -1,0 +1,37 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../../assets/logo.png"></ion-img> 
+    <ion-title>Listado Usuarios</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list padding>
+    <!-- Recorremos el arreglo de registros utilizando item-->
+    <ion-item *ngFor="let u of usuarios">
+      <ion-label style="font-weight: bold;">Correo Electronico</ion-label>
+      <ion-label style="font-weight: bold;">Nombres</ion-label>
+      <ion-label style="font-weight: bold;">Apellidos</ion-label>    
+      <ion-label style="font-weight: bold;">Acciones</ion-label>    
+    
+      
+      
+    </ion-item>
+    <ion-item *ngFor="let u of usuarios">
+      <ion-label>{{u.email}}</ion-label>
+      <ion-label>{{u.first_name}}</ion-label>
+      <ion-label>{{u.last_name}}</ion-label>  
+      <ion-label>
+      <ion-button [routerLink]="['/product-edit/',u.id]"><ion-icon name="create-outline"></ion-icon></ion-button>
+      <ion-button [routerLink]="['/product-delete',u.id]"><ion-icon name="trash-outline"></ion-icon></ion-button>
+      <ion-button [routerLink]="['/lista-usuarios',u.id]"><ion-icon name="eye-outline"></ion-icon></ion-button>
+    </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
