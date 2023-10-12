@@ -47,6 +47,10 @@ const routes: Routes = [
     path: 'actualizar-usuario/:id',
     loadChildren: () => import('./usuarios/actualizar-usuario/actualizar-usuario.module').then( m => m.ActualizarUsuarioPageModule)
   },
+  {
+    path: 'crea-usuario',
+    loadChildren: () => import('./usuarios/crea-usuario/crea-usuario.module').then( m => m.CreaUsuarioPageModule)
+  },
 
   
 ];
