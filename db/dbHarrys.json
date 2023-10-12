@@ -19,10 +19,24 @@
   ],
   "usuarios": [
     {
-      "id": "macarena@soco.cl",
-      "first_name": "Macarena Constanza",
-      "last_name": "Piña",
-      "email": "macarena@soco.cl",
+      "id": 1002,
+      "first_name": "rodrigo",
+      "last_name": "gonzalez",
+      "email": "rodrigo@virtual.cl",
+      "clave": "123456"
+    },
+    {
+      "id": 2,
+      "first_name": "bladi",
+      "last_name": "gonzalez",
+      "email": "rodrigo@virtual.cl",
+      "clave": "123456"
+    },
+    {
+      "id": 1003,
+      "first_name": "rodrasfdigo",
+      "last_name": "gonzaasdflez",
+      "email": "rodrigo@virtual.cl",
       "clave": "123456"
     }
   ]

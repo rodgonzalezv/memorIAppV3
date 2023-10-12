@@ -34,4 +34,22 @@ export class UsuarioService {
       );
   }
 
+  getUsuario(id: String): Observable<ClUsuario> {
+    console.log("getUsuario ID:" + id);
+    return this.http.get<ClUsuario>(apiUrl + "/" + id)
+      .pipe(
+        tap(_ => console.log('Trae el usuario id=${id}')),
+        catchError(this.handleError<ClUsuario>('getUsuario id=${id}'))
+      );
+  }  
+
+  borradoUsuario(id: number): Observable<ClUsuario> {
+    return this.http.delete<ClUsuario>(apiUrl + "/" + id, httpOptions)
+      .pipe(
+        tap(_ => console.log('borrar borrar usuario id=${id}')),
+        catchError(this.handleError<ClUsuario>('borradoUsuario'))
+      );
+  }
+
+
 }

@@ -36,8 +36,16 @@ const routes: Routes = [
     loadChildren: () => import('./usuarios/lista-usuarios/lista-usuarios.module').then( m => m.ListaUsuariosPageModule)
   },
   {
-    path: 'ver-usuarios',
+    path: 'ver-usuarios/:id',
     loadChildren: () => import('./usuarios/ver-usuarios/ver-usuarios.module').then( m => m.VerUsuariosPageModule)
+  },
+  {
+    path: 'crea-usuarios',
+    loadChildren: () => import('./usuarios/crea-usuarios/crea-usuarios.module').then( m => m.CreaUsuariosPageModule)
+  },
+  {
+    path: 'borra-usuarios/:id',
+    loadChildren: () => import('./usuarios/borra-usuarios/borra-usuarios.module').then( m => m.BorraUsuariosPageModule)
   },
   
 ];

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoadingController } from '@ionic/angular';
+import { LoadingController, AlertController } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ClUsuario } from '../model/ClUsuario';
 import { UsuarioService } from '../usuarios.service';
@@ -13,7 +13,10 @@ export class ListaUsuariosPage implements OnInit {
   usuarios: ClUsuario[] = [];
   constructor(public restApi: UsuarioService
   , public loadingController: LoadingController
-  , public router: Router ){ }
+  , public alertController: AlertController
+  , public route: ActivatedRoute
+  , public router: Router 
+  ){ }
 
   ngOnInit() {
     this.getUsuarios();
@@ -47,5 +50,59 @@ export class ListaUsuariosPage implements OnInit {
       })
   }
 
+
+  async borraUsuario(id: number) {
+    // Confirma Primero
+    this.alertaConfirmacion(id, 'Esta seguro que desea eliminar este usuario');
+  }
+
+  async alertaConfirmacion(id: number, msg: string) {
+    const alert = await this.alertController.create({
+      header: 'Borrar Usuario!', // Título
+      message: msg,   // Mensaje
+      buttons: [   // Botones
+      {
+        text: 'Cancelar',
+        role: 'cancel', // Este botón tendrá el rol de cancelar
+        handler: () => {
+          // Puedes agregar aquí cualquier lógica que quieras ejecutar al cancelar
+          console.log('Operación cancelada');
+        }
+      },
+      {
+          text: 'Eliminar',
+          handler: () => { // Si presiona ejecuta esto
+            //this.router.navigate(['']);
+            this.confirmacionBorrado(id)
+          }
+        }
+      ]
+    });
+    await alert.present();
+  }
+
+  
+  async confirmacionBorrado(id: number) {
+    alert("Eliminando ")
+    const loading = await this.loadingController.create({
+      message: 'Loading...'
+    });
+    await loading.present();
+    await this.restApi.borradoUsuario(id)
+      .subscribe({
+        next: (res) => {
+          console.log("Error", res);
+          loading.dismiss();
+          this.router.navigate(['/lista-usuarios']);
+          window.location.reload();
+        }
+        , complete: () => { }
+        , error: (err) => {
+          console.log("Error", err);
+          loading.dismiss(); //Elimina la espera
+        }
+
+      })
+  }
 
 }
