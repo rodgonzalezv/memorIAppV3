@@ -26,7 +26,21 @@
       "clave": "123456"
     },
     {
-      "id": 2,
+      "id": 3,
+      "first_name": "bladi",
+      "last_name": "gonzalez",
+      "email": "rodrigo@virtual.cl",
+      "clave": "123456"
+    },
+    {
+      "id": 4,
+      "first_name": "bladi",
+      "last_name": "gonzalez",
+      "email": "rodrigo@virtual.cl",
+      "clave": "123456"
+    },
+    {
+      "id": 5,
       "first_name": "bladi",
       "last_name": "gonzalez",
       "email": "rodrigo@virtual.cl",

@@ -11,10 +11,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">editaUsuario</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content>
+  <ion-card>
+    <ion-card-content>
+      <ion-item>
+        <p>Nombres : </p>
+        <p>{{usuario.first_name}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Apellidos : </p>
+        <p>{{usuario.last_name}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Email : </p>
+        <p>{{usuario.email}}</p>
+      </ion-item>      
+      <ion-item>
+        <p>Contraseña : </p>
+        <p>{{usuario.clave}}</p>
+      </ion-item>  
+      <div class="ion-text-center">
+        <ion-button [routerLink]="['/lista-usuarios']">Actualizar Usuario</ion-button>    
+      </div>       
+      
+    </ion-card-content>
+    
+  </ion-card>
+
 </ion-content>
