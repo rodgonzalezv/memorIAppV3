@@ -40,13 +40,14 @@ const routes: Routes = [
     loadChildren: () => import('./usuarios/ver-usuarios/ver-usuarios.module').then( m => m.VerUsuariosPageModule)
   },
   {
-    path: 'crea-usuarios',
-    loadChildren: () => import('./usuarios/crea-usuarios/crea-usuarios.module').then( m => m.CreaUsuariosPageModule)
+    path: 'crea-usuario',
+    loadChildren: () => import('./usuarios/crea-usuario/crea-usuario.module').then( m => m.CreaUsuarioPageModule)
   },
   {
-    path: 'actualizar-usuario/:id',
-    loadChildren: () => import('./usuarios/actualizar-usuario/actualizar-usuario.module').then( m => m.ActualizarUsuarioPageModule)
+    path: 'edita-usuario/:id',
+    loadChildren: () => import('./usuarios/edita-usuario/edita-usuario.module').then( m => m.EditaUsuarioPageModule)
   },
+
 
   
 ];

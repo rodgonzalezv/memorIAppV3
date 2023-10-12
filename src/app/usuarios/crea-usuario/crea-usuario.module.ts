@@ -4,17 +4,17 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { CreaUsuariosPageRoutingModule } from './crea-usuarios-routing.module';
+import { CreaUsuarioPageRoutingModule } from './crea-usuario-routing.module';
 
-import { CreaUsuariosPage } from './crea-usuarios.page';
+import { CreaUsuarioPage } from './crea-usuario.page';
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    CreaUsuariosPageRoutingModule
+    CreaUsuarioPageRoutingModule
   ],
-  declarations: [CreaUsuariosPage]
+  declarations: [CreaUsuarioPage]
 })
-export class CreaUsuariosPageModule {}
+export class CreaUsuarioPageModule {}

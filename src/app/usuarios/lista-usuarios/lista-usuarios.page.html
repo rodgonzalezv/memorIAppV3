@@ -26,7 +26,7 @@
       <ion-label>{{u.last_name}}</ion-label>  
       <ion-label>
       <ion-button [routerLink]="['/ver-usuarios',u.id]"><ion-icon name="eye-outline"></ion-icon></ion-button>
-      <ion-button [routerLink]="['/actualizar-usuario/',u.id]"><ion-icon name="create-outline"></ion-icon></ion-button>
+      <ion-button [routerLink]="['/edita-usuario/',u.id]"><ion-icon name="create-outline"></ion-icon></ion-button>
       <ion-button type="button" (click)="borraUsuario(u.id)"><ion-icon name="trash-outline"></ion-icon></ion-button>
     </ion-label>
     </ion-item>
