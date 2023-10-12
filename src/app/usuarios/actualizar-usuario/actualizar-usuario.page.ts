@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LoadingController, AlertController } from '@ionic/angular';
 import { ActivatedRoute, Router } from '@angular/router';
-import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
+import { FormControl, FormGroupDirective, FormBuilder, FormGroup, NgForm, Validators, ReactiveFormsModule } from '@angular/forms';
 import { ClUsuario } from '../model/ClUsuario';
 import { UsuarioService } from '../usuarios.service';
 
@@ -26,7 +26,7 @@ constructor(public restApi: UsuarioService,
   ngOnInit() {
     console.log("ngOnInit ID:" + this.route.snapshot.params['id']);
     // Relizamos lectura
-    this.traeUsuario(this.route.snapshot.params['id']);
+    this.getUsuario(this.route.snapshot.params['id']);
     // Especificamos Validaciones por medio de FormGroup
     this.usuarioForm = this.formBuilder.group({
       'user_first_name': [null, Validators.required]
@@ -48,7 +48,7 @@ constructor(public restApi: UsuarioService,
 
   }
 
-  async traeUsuario(id: number) {
+  async getUsuario(id: number) {
     // Crea Wait
       const loading = await this.loadingController.create({
         message: 'Loading...'
@@ -56,7 +56,7 @@ constructor(public restApi: UsuarioService,
       // Muestra Wait
       await loading.present();
       // Obtiene el Observable
-      await this.restApi.traeUsuario(id + "")
+      await this.restApi.getUsuario(id + "")
         .subscribe({
           next: (data) => {
             console.log("traeUsuario data****");
