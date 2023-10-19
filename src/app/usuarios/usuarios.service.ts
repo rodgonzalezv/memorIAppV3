@@ -5,7 +5,6 @@ import { ClUsuario } from './model/ClUsuario';
 import { Observable, of, throwError } from 'rxjs';
 import { catchError, tap, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse} from '@angular/common/http';
-import { ReactiveFormsModule } from '@angular/forms';
 
 // creamos Constantes que utilizaremos en el envio
 const apiUrl = "http://localhost:3000/usuarios";

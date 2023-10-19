@@ -51,6 +51,10 @@ const routes: Routes = [
     path: 'crea-usuario',
     loadChildren: () => import('./usuarios/crea-usuario/crea-usuario.module').then( m => m.CreaUsuarioPageModule)
   },
+  {
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+  },
 
   
 ];
