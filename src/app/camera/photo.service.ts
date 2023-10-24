@@ -32,7 +32,7 @@ export class PhotoService {
         webviewPath: capturedPhoto.webPath
       });
     } catch (error) {
-      console.error('Error taking photo:', error);
+      console.error('Error tomando foto:', error);
     }
   }
 }
