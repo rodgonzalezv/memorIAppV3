@@ -20,6 +20,6 @@ export class CameraPage implements OnInit {
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
-
+  
   }
 }

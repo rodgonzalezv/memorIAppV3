@@ -20,7 +20,7 @@ export class PhotoService {
       const capturedPhoto = await Camera.getPhoto({
         resultType: CameraResultType.Uri,
         source: CameraSource.Camera,
-        quality: 100
+        quality: 10
       });
 
       // Generate a unique name for the photo
@@ -36,3 +36,6 @@ export class PhotoService {
     }
   }
 }
+
+
+
