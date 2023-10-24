@@ -4,7 +4,7 @@ import { PhotoService } from './photo.service';
 @Component({
   selector: 'app-camera',
   templateUrl: './camera.page.html',
-  styleUrls: ['./camera.page.scss'],
+  styleUrls: ['./camera.page.scss'],  
 })
 export class CameraPage implements OnInit {
   capturedImage: string = '';
@@ -20,6 +20,5 @@ export class CameraPage implements OnInit {
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
-
   }
 }
