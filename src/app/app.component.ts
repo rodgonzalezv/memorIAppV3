@@ -10,6 +10,7 @@ export class AppComponent {
     { title: 'Listado Memoriales', url: 'product-list', icon: 'mail' },
     { title: 'Crea Usuarios', url: 'crea-usuarios', icon: 'mail' },
     { title: 'Listado Usuarios', url: 'lista-usuarios', icon: 'mail' },
+    { title: 'Camara', url: 'camera', icon: 'camera' },
     /*{ title: 'Producto/Editar', url: 'product-edit', icon: 'mail' },*/
 
 
