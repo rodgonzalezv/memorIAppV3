@@ -11,6 +11,7 @@ export class AppComponent {
     { title: 'Crea Usuarios', url: 'crea-usuarios', icon: 'mail' },
     { title: 'Listado Usuarios', url: 'lista-usuarios', icon: 'mail' },
     { title: 'Camara', url: 'camera', icon: 'camera' },
+    { title: 'GPS', url: 'gps', icon: 'none' },
     /*{ title: 'Producto/Editar', url: 'product-edit', icon: 'mail' },*/
 
 

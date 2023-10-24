@@ -7,7 +7,7 @@ import { PhotoService } from './photo.service';
   styleUrls: ['./camera.page.scss'],
 })
 export class CameraPage implements OnInit {
-  capturedImage: string = ''; // 用于存储拍摄的照片
+  capturedImage: string = '';
 
   constructor(public   photoService: PhotoService) {}
 
@@ -20,6 +20,6 @@ export class CameraPage implements OnInit {
 
   addPhotoToGallery() {
     this.photoService.addNewToGallery();
-    // 这里可以编写你的逻辑来将照片添加到图库
+
   }
 }

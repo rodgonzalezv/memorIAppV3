@@ -55,6 +55,10 @@ const routes: Routes = [
     path: 'camera',
     loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
   },
+  {
+    path: 'gps',
+    loadChildren: () => import('./gps/gps.module').then( m => m.GpsPageModule)
+  },
 
   
 ];
