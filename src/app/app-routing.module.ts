@@ -71,6 +71,10 @@ const routes: Routes = [
     path: 'ver-memorial/:idProducto',
     loadChildren: () => import('./memoriales/ver-memorial/ver-memorial.module').then( m => m.VerMemorialPageModule)
   },
+  {
+    path: 'actualizar-memorial',
+    loadChildren: () => import('./memoriales/actualizar-memorial/actualizar-memorial.module').then( m => m.ActualizarMemorialPageModule)
+  },
 
 
   

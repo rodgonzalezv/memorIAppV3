@@ -56,5 +56,13 @@ export class MemorialesService {
       );
   }
 
+  actualizarMemorial(idProducto: number, nombreprod: apiMemoriales): Observable<apiMemoriales> {
+    return this.http.put<apiMemoriales>(apiUrl + "/" + idProducto, nombreprod, httpOptions)
+      .pipe(
+        tap(_ => console.log('memorial actualizado id=${idProducto}')),
+        catchError(this.handleError<any>('actualizarMemorial'))
+      );
+  }
+
 }
 
