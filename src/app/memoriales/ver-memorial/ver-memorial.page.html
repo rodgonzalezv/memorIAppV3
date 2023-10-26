@@ -1,0 +1,33 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../../assets/logo.png"></ion-img> 
+    <ion-title>Detalle Memorial desde api externa</ion-title>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content>
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nombre Memorial: {{memorial.nombreprod}} - {{memorial.nombreprod}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <p>cantidad : </p>
+        <p>{{memorial.cantidad}}</p>
+      </ion-item>
+      <ion-item>
+        <p>fecha : </p>
+        <p>{{memorial.fCreacion}}</p>
+      </ion-item>
+      
+    </ion-card-content>
+  </ion-card>
+</ion-content>

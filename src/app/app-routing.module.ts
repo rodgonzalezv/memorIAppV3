@@ -59,6 +59,19 @@ const routes: Routes = [
     path: 'gps',
     loadChildren: () => import('./gps/gps.module').then( m => m.GpsPageModule)
   },
+  {
+    path: 'lista-memoriales',
+    loadChildren: () => import('./memoriales/lista-memoriales/lista-memoriales.module').then( m => m.ListaMemorialesPageModule)
+  },
+  {
+    path: 'crea-memorial',
+    loadChildren: () => import('./memoriales/crea-memorial/crea-memorial.module').then( m => m.CreaMemorialPageModule)
+  },
+  {
+    path: 'ver-memorial/:idProducto',
+    loadChildren: () => import('./memoriales/ver-memorial/ver-memorial.module').then( m => m.VerMemorialPageModule)
+  },
+
 
   
 ];

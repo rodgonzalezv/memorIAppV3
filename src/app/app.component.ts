@@ -12,6 +12,8 @@ export class AppComponent {
     { title: 'Listado Usuarios', url: 'lista-usuarios', icon: 'mail' },
     { title: 'Camara', url: 'camera', icon: 'camera' },
     { title: 'GPS', url: 'gps', icon: 'none' },
+    { title: 'Crea Memorial API', url: 'crea-memorial', icon: 'none' },
+    { title: 'Lista Memorial API', url: 'lista-memoriales', icon: 'none' },
     /*{ title: 'Producto/Editar', url: 'product-edit', icon: 'mail' },*/
 
 
