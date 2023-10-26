@@ -46,19 +46,16 @@ export class VerMemorialPage implements OnInit {
   }
 
 
-
-
-
   async getMemorial() {
-    console.log("ID:" + this.route.snapshot.paramMap.get('idProducto'));
-    // Creamos un Wait
-    const loading = await this.loadingController.create({ message: 'Loading...' });
-    // Mostramos el Wait
+    console.log("ID xxx:" + this.route.snapshot.paramMap.get('idProducto'));
+    
+    const loading = await this.loadingController.create({ message: 'cargando xxx...' });
+    
     await loading.present();
     await this.restApi.getMemorial(this.route.snapshot.paramMap.get('idProducto')!)
       .subscribe({
         next: (res) => {
-          console.log("Data *****************");
+          console.log("Data aqui*****************");
           console.log(res);
           // Si funciona la respuesta la pasamos al producto
           this.memorial = res;

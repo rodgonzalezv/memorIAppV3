@@ -7,7 +7,7 @@ import { catchError, tap, map } from 'rxjs/operators';
 import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 
 // creamos Constantes que utilizaremos en el envio
-const apiUrl = "https://sumativa2.onrender.com/api/productos/";
+const apiUrl = "https://sumativa2.onrender.com/api/productos";
 const httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
 
 @Injectable({
@@ -20,7 +20,7 @@ export class MemorialesService {
   // Controla y enviará un mensaje a consola para todos los errores
   private handleError<T>(operation = 'operation', result?: T) {
     return (error: any): Observable<T> => {
-      console.error("handleError Harrys", error); // log to console instead
+      console.error("handleError datos de la api externa", error); // log to console instead
       return of(result as T);
     };
   }
@@ -37,14 +37,14 @@ export class MemorialesService {
 
 
   //  Obtener un Producto
-  getMemorial(codigo: String): Observable<apiMemoriales> {
+  getMemorial(idProducto: String): Observable<apiMemoriales> {
     //const url = '${apiUrl}/${id}';
     //return this.http.get<Producto>(url).pipe(
-    console.log("getMemorial codigo:" + codigo);
-    return this.http.get<apiMemoriales>(apiUrl + "/" + codigo)
+    console.log("getMemorial idProducto x:" + idProducto);
+    return this.http.get<apiMemoriales>(apiUrl + "/" + idProducto)
       .pipe(
         tap(_ => console.log('fetched product id=${codigo}')),
-        catchError(this.handleError<apiMemoriales>('getProduct id=${codigo}'))
+        catchError(this.handleError<apiMemoriales>('getMemorial id=${codigo}'))
       );
   }
 
