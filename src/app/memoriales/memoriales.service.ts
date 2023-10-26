@@ -48,4 +48,12 @@ export class MemorialesService {
       );
   }
 
+  borrarMemorial(id: number): Observable<apiMemoriales> {
+    return this.http.delete<apiMemoriales>(apiUrl + "/" + id, httpOptions)
+      .pipe(
+        tap(_ => console.log('borrar memorial id=${idProducto}')),
+        catchError(this.handleError<apiMemoriales>('deleteMemorial'))
+      );
+  }
+
 }
