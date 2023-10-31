@@ -21,8 +21,8 @@ export class GpsPage implements OnInit {
       const position = await Geolocation.getCurrentPosition();
       const lat = position.coords.latitude;
       const lon = position.coords.longitude;
-      this.coordinates = `Latitud: ${lat}, Longitud: ${lon}`;
-      console.log('Coordenadas actuales:', position);
+      this.coordinates = `Latitud ggg: ${lat}, Longitud: ${lon}`;
+      console.log('Coordenadas actuales jhh:', position);
     } catch (error) {
       console.error('Error al obtener las coordenadas:', error);
       this.coordinates = 'Error al obtener las coordenadas';
