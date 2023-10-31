@@ -25,7 +25,7 @@ export class ActualizarMemorialPage implements OnInit {
     private formBuilder: FormBuilder) { }
 
     ngOnInit() {
-      this.getMemorial(this.route.snapshot.params['idProducto']);
+      this.getMemorial(this.route.snapshot.params['id']);
       // Especificamos Validaciones por medio de FormGroup
       this.memorialForm = this.formBuilder.group({
         'memorial_nombre': [null, Validators.required],
