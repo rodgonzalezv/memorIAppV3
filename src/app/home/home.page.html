@@ -1,0 +1,57 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="background-image"></div>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../../assets/logo.png" style="display: block; margin: 0 auto;"></ion-img>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="background-image"></div>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-button (click)="productos()" fill="outline">
+            <ion-img src="../../assets/api.png" style="display: block; margin: 0 auto; width: 60%;"></ion-img>
+          </ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card style="padding: 10px;">
+          <ion-img src="../../assets/memorial.jpg" style="display: block; margin: 0 auto; width: 60%;"></ion-img>
+          <ion-card-content>
+            Memoriales
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-button (click)="camara()" fill="outline">
+            <ion-img src="../../assets/camara.png" style="display: block; margin: 0 auto; width: 60%;"></ion-img>
+          </ion-button>
+        </ion-card>
+      </ion-col>
+      <ion-col>
+        <ion-card>
+          <ion-button (click)="gps()" fill="outline">
+            <ion-img src="../../assets/gps.png" style="display: block; margin: 0 auto; width: 60%;"></ion-img>
+          </ion-button>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+  <ion-button color="danger" shape="round" size="default" expand="block" (click)="logout()">Cerrar Sesión</ion-button>
+</ion-content>
+

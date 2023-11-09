@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="background-image"></div>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../../assets/logo.png" style="display: block; margin: 0 auto;"></ion-img>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="background-image"></div>  
+<ion-card style="padding: 10px;">
+
+<ion-item>
+  <ion-input labelPlacement="floating" value="" [(ngModel)]="username" name="username" type="text">
+    <div slot="label">Usuario</div>
+  </ion-input>
+</ion-item>
+<ion-item>
+  <ion-input labelPlacement="floating" value="" [(ngModel)]="password" name="password" type="text">
+    <div slot="label">Contraseña</div>
+  </ion-input>
+</ion-item>
+
+
+
+  <ion-button expand="full" (click)="login()">Iniciar Sesión</ion-button>
+
+
+  <p style="padding-top: 40px; text-align: center;">Si aun no tiene un usuario, puede registrarse en el siguiente link</p>
+  <br>
+  <ion-button expand="block" color="warning" shape="round" size="default" [routerLink]="['/registro']">
+  <ion-icon slot="start" name="add-circle-outline"></ion-icon>
+  Registrate  
+  </ion-button>
+
+</ion-card>  
+</ion-content>

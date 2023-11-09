@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { ProductEditPage } from './product-delete.page';
+import { ProductDeletePage } from './product-delete.page';
 
 describe('ProductDeletePage', () => {
   let component: ProductDeletePage;

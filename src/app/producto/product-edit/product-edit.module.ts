@@ -7,13 +7,12 @@ import { IonicModule } from '@ionic/angular';
 import { ProductEditPageRoutingModule } from './product-edit-routing.module';
 
 import { ProductEditPage } from './product-edit.page';
-import { ReactiveFormsModule } from '@angular/forms';  // <<========
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    ReactiveFormsModule,      // <<========
     ProductEditPageRoutingModule
   ],
   declarations: [ProductEditPage]

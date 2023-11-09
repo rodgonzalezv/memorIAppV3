@@ -1,0 +1,38 @@
+.background-image {
+    background-image: url('../../assets/fondo.jpg');
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  .fade-in {
+    animation: fadeIn 2s ease-in-out;
+  }
+  
+  .fade-in2 {
+    animation: fadeIn 3s ease-in-out;
+  }
+  .fade-in3 {
+    animation: fadeIn 4s ease-in-out;
+  }
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+
+  ion-img {
+    width: 300px;
+    padding: 10px;
+    padding-top: 150px;
+}
+
