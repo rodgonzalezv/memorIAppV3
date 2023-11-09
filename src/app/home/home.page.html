@@ -13,8 +13,19 @@
 
 <ion-content>
   <div class="background-image"></div>
+  <BR>
   <ion-grid>
     <ion-row>
+      <ion-text>Con API local (dbHarrys)</ion-text>
+    </ion-row>     
+    <ion-row>
+      <ion-col>
+        <ion-card>
+          <ion-button (click)="usuarios()" fill="outline">
+            <ion-img src="../../assets/usuarios.png" style="display: block; margin: 0 auto; width: 60%;"></ion-img>
+          </ion-button>
+        </ion-card>
+      </ion-col>
       <ion-col>
         <ion-card>
           <ion-button (click)="productos()" fill="outline">
@@ -22,16 +33,23 @@
           </ion-button>
         </ion-card>
       </ion-col>
+    </ion-row>    
+    <ion-row>
+      <ion-text>Con API Externa</ion-text>
+    </ion-row>  
+    <ion-row>
       <ion-col>
-        <ion-card style="padding: 10px;">
-          <ion-img src="../../assets/memorial.jpg" style="display: block; margin: 0 auto; width: 60%;"></ion-img>
-          <ion-card-content>
-            Memoriales
-          </ion-card-content>
+        <ion-card>
+          <ion-button (click)="memoriales()" fill="outline">
+            <ion-img src="../../assets/memoriales.png" style="display: block; margin: 0 auto; width: 60%;"></ion-img>
+          </ion-button>
         </ion-card>
       </ion-col>
+      <ion-col>
+      </ion-col>
+
     </ion-row>
-    
+    <ion-text>Uso de Camara y GPS</ion-text>
     <ion-row>
       <ion-col>
         <ion-card>

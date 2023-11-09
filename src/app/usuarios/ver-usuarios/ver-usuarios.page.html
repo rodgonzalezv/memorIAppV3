@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <div class="background-image"></div>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-img src="../../assets/logo.png" style="display: block; margin: 0 auto; width: 200px;"></ion-img>
+    <ion-buttons slot="end">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+<div class="background-image"></div>  
+<ion-card style="padding: 10px;">
+
+  <ion-card>
+    <ion-card-header>
+      <ion-card-title>Nombre Memorial: {{usuario.email}}</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ion-item>
+        <p>Nombres : </p>
+        <p>{{usuario.first_name}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Apellidos : </p>
+        <p>{{usuario.last_name}}</p>
+      </ion-item>
+      <ion-item>
+        <p>Email : </p>
+        <p>{{usuario.email}}</p>
+      </ion-item>      
+    </ion-card-content>
+  </ion-card>  
+
+</ion-card>  

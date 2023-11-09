@@ -19,13 +19,6 @@
   ],
   "usuarios": [
     {
-      "id": 1002,
-      "first_name": "rodrigo",
-      "last_name": "gonzalez",
-      "email": "rodrigo@virtual.cl",
-      "clave": "123456"
-    },
-    {
       "id": 2,
       "first_name": "bladimirasdfasdf",
       "last_name": "piña",

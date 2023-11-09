@@ -8,6 +8,7 @@ import { ProductServiceService } from '../product-service.service';
   selector: 'app-product-list',
   templateUrl: './product-list.page.html',
   styleUrls: ['./product-list.page.scss'],
+  providers: [ProductServiceService], // Asegúrate de que está aquí
 })
 export class ProductListPage implements OnInit {
   // Creamos la Variable para el Html

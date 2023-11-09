@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { AuthGuard } from './auth.guard';
+import { VerUsuariosPage } from './usuarios/ver-usuarios/ver-usuarios.page';
+
 
 const routes: Routes = [
   {
@@ -27,24 +29,30 @@ const routes: Routes = [
   {
     path: 'gps',
     loadChildren: () => import('./gps/gps.module').then( m => m.GpsPageModule)
-  }, 
+  },
+  {
+    path: 'lista-memoriales',
+    loadChildren: () => import('./memoriales/lista-memoriales/lista-memoriales.module').then( m => m.ListaMemorialesPageModule)
+  },
+  {
+    path: 'lista-usuarios',
+    loadChildren: () => import('./usuarios/lista-usuarios/lista-usuarios.module').then( m => m.ListaUsuariosPageModule)
+  },
+  {
+    path: 'ver-usuarios/:id',
+    loadChildren: () => import('./usuarios/ver-usuarios/ver-usuarios.module').then(m => m.VerUsuariosPageModule),
+  },
   {
     path: 'product-list',
     loadChildren: () => import('./producto/product-list/product-list.module').then( m => m.ProductListPageModule)
   },
   {
-    path: 'product-detail',
-    loadChildren: () => import('./producto/product-detail/product-detail.module').then( m => m.ProductDetailPageModule)
+    path: 'camera',
+    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
   },
-  {
-    path: 'product-edit',
-    loadChildren: () => import('./producto/product-edit/product-edit.module').then( m => m.ProductEditPageModule)
-  },
-  {
-    path: 'product-delete',
-    loadChildren: () => import('./producto/product-delete/product-delete.module').then( m => m.ProductDeletePageModule)
-  },
- 
+
+
+
 
 /*
   {

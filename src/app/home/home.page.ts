@@ -21,15 +21,23 @@ export class HomePage {
   }
 
   camara() {
-    this.router.navigate(['/camara']);
+    this.router.navigate(['camera']);
   }
 
   gps() {
-    this.router.navigate(['/gps']);
+    this.router.navigate(['gps']);
   }
   productos() {
-    this.router.navigate(['/product-list']);
+    this.router.navigate(['product-list']);
   }
+  memoriales() {
+    this.router.navigate(['lista-memoriales']);
+  }
+
+  usuarios() {
+    this.router.navigate(['lista-usuarios']);
+  }
+
 
 }
 
