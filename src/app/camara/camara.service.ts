@@ -6,10 +6,13 @@ export interface UserPhoto {
   webviewPath?: string;
 }
 
+
 @Injectable({
   providedIn: 'root'
 })
-export class PhotoService {
+
+
+export class CamaraService {
   public photos: UserPhoto[] = [];
 
   constructor() { }
@@ -32,8 +35,8 @@ export class PhotoService {
         webviewPath: capturedPhoto.webPath
       });
     } catch (error) {
-      console.error('Error tomando foto:', error);
+      console.error('Error tomando fotos:', error);
     }
   }
-}
 
+}

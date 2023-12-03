@@ -47,8 +47,8 @@ const routes: Routes = [
     loadChildren: () => import('./producto/product-list/product-list.module').then( m => m.ProductListPageModule)
   },
   {
-    path: 'camera',
-    loadChildren: () => import('./camera/camera.module').then( m => m.CameraPageModule)
+    path: 'camara',
+    loadChildren: () => import('./camara/camara.module').then( m => m.CamaraPageModule)
   },
 
 

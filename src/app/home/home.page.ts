@@ -21,7 +21,7 @@ export class HomePage {
   }
 
   camara() {
-    this.router.navigate(['camera']);
+    this.router.navigate(['camara']);
   }
 
   gps() {
